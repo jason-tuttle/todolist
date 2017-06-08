@@ -7,9 +7,9 @@ var toDoList = document.querySelector('.todo-list');
    if (event.keyCode === 13) {
      let newItem = event.target.value;
      event.target.value = "";
-     var newToDoItem = document.createElement('li');
-     newToDoItem.innerHTML = '<li><div class="view"><label>' + newItem + '</label></div></li>';
-     toDoList.appendChild(newToDoItem);
+    //  var newToDoItem = document.createElement('li');
+     toDoList.insertAdjacentHTML('beforeend', '<li><div class="view"><label>' + newItem + '</label></div></li>');
+    //  toDoList.appendChild(newToDoItem);
    }
    return event;
  });
